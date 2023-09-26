@@ -1,0 +1,242 @@
+// Create a admin
+POST http://localhost:5000/admins
+Content-Type: application/json
+
+{
+    "name": "Brendan",
+    "provinsi": "32",
+    "kabkota": "3201",
+    "kecamatan": "3201070",
+    "kelurahan": "3201070017",
+    "email": "brendan@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "superadmin"
+}
+
+###
+// Get All Admins
+GET http://localhost:5000/admins
+
+
+###
+// Get Single Admin
+GET http://localhost:5000/admins/361caff7-ad4f-4de4-bd03-1bb96534ec7a
+
+###
+// Update a Admin
+PATCH http://localhost:5000/admins/361caff7-ad4f-4de4-bd03-1bb96534ec7a
+Content-Type: application/json
+
+{
+    "name": "Brendan Updated",
+    "provinsi": "Jawa Barat",
+    "kabkota": "Bogor Barat",
+    "kecamatan": "Ciomas",
+    "kelurahan": "Padasuka",
+    "email": "admin@gmail.com",
+    "password": "123456",
+    "confPassword": "123456"
+}
+
+###
+// Delete a Admin
+DELETE http://localhost:5000/admins/38969af9-25e1-4e5a-a50a-f9e47f4d1eae
+
+###
+// Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "brendan@gmail.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "deni@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
+
+###
+// Get Hasil Keuangan by ID
+GET http://localhost:5000/lapkeuangans/856a0ff1-e435-45b4-bf80-72e2ac330a4f
+
+###
+// Update Hasil Keuangan by ID
+PATCH http://localhost:5000/lapkeuangans/29672e5a-0811-4419-868c-e8384a24282d
+Content-Type: application/json
+
+{
+    "kategori":"pengeluaran",
+    "keterangan":"Seragam Keamanan",
+    "tanggal":"25 Januari 2023",
+    "nominal": 20000
+}
+
+###
+POST http://localhost:5000/login/warga
+Content-Type: application/json
+
+{
+    "email": "rino@gmail.com",
+    "password": "12345"
+}
+
+###
+POST http://localhost:5000/login/warga
+Content-Type: application/json
+
+{
+    "email": "ari@gmail.com",
+    "password": "12345"
+}
+
+###
+// Get All Iurans
+GET http://localhost:5000/iurans/warga
+
+###
+GET http://localhost:5000/me/warga
+
+###
+DELETE http://localhost:5000/logout/warga
+
+###
+// Update isPaid Warga
+PATCH http://localhost:5000/members/paid/a2235885-2ab9-4de7-9b9e-9631a51d64a2
+Content-Type: application/json
+
+{
+    "isPaid": true
+}
+
+###
+// Get Buktis
+GET http://localhost:5000/buktis
+
+###
+// Get All Members
+GET http://localhost:5000/members
+
+###
+// Get Single Member
+GET http://localhost:5000/members/8efec621-ab19-40b0-8ee4-d39f158c3cf9
+
+###
+// POST Data Members
+POST http://localhost:5000/members
+Content-Type: application/json
+
+{
+    "name": "Luara",
+    "norumah": "12",
+    "email": "luara@gmail.com",
+    "password": "12345"
+}
+
+###
+// Update Data Member
+PATCH http://localhost:5000/members/d944b05a-f9b4-44a8-8632-dac0f72b01f2
+Content-Type: application/json
+
+{
+    "name": "Doni Updated",
+    "norumah": "14",
+    "email": "doni@gmail.com",
+    "password": "12345"
+}
+
+###
+// Update Status Member
+PATCH http://localhost:5000/members/1ca66ba4-a0a8-4406-aacf-ae32225cca85
+Content-Type: application/json
+
+{
+    "status" : true
+}
+
+###
+// Delete data member
+DELETE http://localhost:5000/members/bbce580a-a135-4ed7-aa24-b2f3900c7ea9
+
+
+###
+// Get All Iurans
+GET http://localhost:5000/iurans
+
+###
+// Get Single Iuran
+GET http://localhost:5000/iurans/a9
+
+###
+// POST Data Iuran
+POST http://localhost:5000/iurans
+Content-Type: application/json
+
+{
+    
+}
+
+###
+// Update Data Iuran
+PATCH http://localhost:5000/iurans/d944b05a-f9b4-44a8-8632-dac0f72b01f2
+Content-Type: application/json
+
+{
+    
+}
+
+###
+// Delete Iuran
+DELETE http://localhost:5000/iurans/5a75eabc-763f-49c8-9a5b-219cca4c603c
+
+###
+// Get All Pembayaran
+GET http://localhost:5000/pembayarans
+
+###
+// Create pembayaran
+POST http://localhost:5000/pembayarans
+Content-Type: application/json
+
+###
+// Get keuangan
+GET  http://localhost:5000/keuangans
+
+###
+// Get keuangan by ID
+GET http://localhost:5000/keuangans/cac278eb-5e2f-47a2-ae0e-ef3354785ed3
+
+###
+// Create keuangan
+POST http://localhost:5000/keuangans
+Content-Type: application/json
+
+{
+    "bulan": "Januari",
+    "tahun": "2023"
+}
+
+###
+PATCH http://localhost:5000/members/e742f1a8-9b16-4707-ac62-b5b97ae8fe67
+Content-Type: application/json
+
+{
+    "password": "1234567",
+    "confPassword": "1234567"
+}
+
+###
+// Get Wilayah Indonesia
+GET https://brendancicero.github.io/api-wilayah-indonesia/api/provinces.json
